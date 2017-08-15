@@ -29,7 +29,7 @@ plt.plot(mybar,label='my bar')
 plt.legend(loc='best')
 
 plt.show()
-df.index = pd.to_datetime(df.index)
+df.index = pd.to_datetime(df.index) # 注意空虚数据转换，不然出错!
 plt.plot(df.index,mydif,label='my dif')
 plt.plot(df.index,mydea,label='my dea')
 plt.plot(df.index,mybar,label='my bar')

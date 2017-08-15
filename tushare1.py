@@ -4,7 +4,7 @@ import matplotlib
 
 result = ts.get_hist_data('sh',start="2017-01-01")
 # result = result.reindex(index = result.index[::-1])
-result = result.iloc[::-1]
+result = result.iloc[::-1] #反转
 result2 = result[['close','ma5','ma10','ma20']]
 
 

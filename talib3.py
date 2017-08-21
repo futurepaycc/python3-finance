@@ -6,7 +6,8 @@ import numpy as np
 import pandas as pd
 import tushare as ts
 
-df = pd.read_csv("sh.csv",index_col="date")
+# df = pd.read_csv("sh.csv",index_col="date")
+df = ts.get_hist_data('sh',start='2014-01-01')
 df[df['volume'] == 0] 
 
 dif,dea,bar = talib.MACD(df['close'].values, fastperiod=12, slowperiod=26, signalperiod=9)

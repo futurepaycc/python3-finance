@@ -25,5 +25,6 @@ for x in range(len(df.index) - 1):
 
     deaItemPlus = dea.tolist()[x+1]
     barItemPlus = bar.tolist()[x+1]
+    #交叉打印
     if(deaItem < barItem) and (deaItemPlus >= barItemPlus):
         print(x)

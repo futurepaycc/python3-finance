@@ -19,5 +19,11 @@ plt.plot(df.index,bar,label='bar')
 plt.legend(loc='best')
 plt.show()
 
-for x in range(len(df.index)):
-    dea.tolist()[x]
+for x in range(len(df.index) - 1):
+    deaItem = dea.tolist()[x]
+    barItem = bar.tolist()[x]
+
+    deaItemPlus = dea.tolist()[x+1]
+    barItemPlus = bar.tolist()[x+1]
+    if(deaItem < barItem) and (deaItemPlus >= barItemPlus):
+        print(x)

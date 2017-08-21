@@ -18,3 +18,6 @@ plt.plot(df.index,dea,label='dea')
 plt.plot(df.index,bar,label='bar')
 plt.legend(loc='best')
 plt.show()
+
+for x in range(len(df.index)):
+    dea.tolist()[x]
